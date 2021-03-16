@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-port = 3000;
+port = process.env.PORT;
 app.listen(port,()=>{
     console.log("The app is up : "+port);
 });
